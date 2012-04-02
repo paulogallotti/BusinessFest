@@ -10,7 +10,7 @@
 
 @implementation FirstViewController
 
-@synthesize viewController;
+@synthesize options;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -34,14 +34,20 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    self.options = [[NSArray alloc] 
+                    initWithObjects:@"O Evento", @"Programação",
+                    @"Casting", @"Cotas/Reservas", @"Localização",@"Novidades",@"Entidades/Patrocinadores",@"Contato", nil];
+}
+
+-(void)dealloc
+{
+    [options release];
+    [super dealloc];
 }
 
 - (void)viewDidUnload
 {
     [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -73,12 +79,12 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 3;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 5;
+    return [self.options count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -90,10 +96,18 @@
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier] autorelease];
     }
     
-    cell.textLabel.text = [NSString stringWithFormat:@"Linha %i da seção %i", indexPath.row, indexPath.section];
+    cell.textLabel.text = [self.options objectAtIndex: [indexPath row]];
+    
+    
+
+    //cell.textLabel.text = [NSString stringWithFormat:@"Linha %i da seção %i", indexPath.row, indexPath.section];
     
     return cell;
 }
 
+- (UITableViewCellAccessoryType)tableView:(UITableView *)tv accessoryTypeForRowWithIndexPath:(NSIndexPath *)indexPath
+{
+    return UITableViewCellAccessoryDisclosureIndicator;
+}
 
 @end

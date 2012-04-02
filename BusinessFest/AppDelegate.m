@@ -14,7 +14,6 @@
 
 #import "ThirdViewController.h"
 
-#import "MyTableViewController.h"
 
 @implementation AppDelegate
 
