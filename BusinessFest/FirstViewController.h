@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FirstViewController : UIViewController
+@class MyTableViewController;
+
+@interface FirstViewController : UIViewController <UINavigationControllerDelegate, UITableViewDelegate, UITableViewDataSource>
+
+@property (strong, nonatomic) MyTableViewController *viewController;
 
 @end

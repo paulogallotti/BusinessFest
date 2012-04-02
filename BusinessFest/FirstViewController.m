@@ -10,11 +10,14 @@
 
 @implementation FirstViewController
 
+@synthesize viewController;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        self.title = NSLocalizedString(@"First", @"First");
+    if (self) 
+    {
+        self.title = NSLocalizedString(@"Antes", @"Antes");
         self.tabBarItem.image = [UIImage imageNamed:@"first"];
     }
     return self;
@@ -66,5 +69,31 @@
     // Return YES for supported orientations
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
+
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 3;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 5;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *cellIdentifier = @"Cell";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    if (cell == nil) {
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier] autorelease];
+    }
+    
+    cell.textLabel.text = [NSString stringWithFormat:@"Linha %i da seção %i", indexPath.row, indexPath.section];
+    
+    return cell;
+}
+
 
 @end

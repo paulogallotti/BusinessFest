@@ -21,6 +21,10 @@
 		63B666DE152A10A700A5ABC3 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 63B666DD152A10A700A5ABC3 /* second@2x.png */; };
 		63B666E1152A10A700A5ABC3 /* FirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63B666DF152A10A700A5ABC3 /* FirstViewController.xib */; };
 		63B666E4152A10A700A5ABC3 /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63B666E2152A10A700A5ABC3 /* SecondViewController.xib */; };
+		63B666ED152A121B00A5ABC3 /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B666EB152A121A00A5ABC3 /* ThirdViewController.m */; };
+		63B666EE152A121B00A5ABC3 /* ThirdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63B666EC152A121A00A5ABC3 /* ThirdViewController.xib */; };
+		63B666FB152A1AD000A5ABC3 /* MyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B666F9152A1ACF00A5ABC3 /* MyTableViewController.m */; };
+		63B666FC152A1AD000A5ABC3 /* MyTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63B666FA152A1AD000A5ABC3 /* MyTableViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,22 +32,28 @@
 		63B666BF152A10A700A5ABC3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		63B666C1152A10A700A5ABC3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		63B666C3152A10A700A5ABC3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		63B666C7152A10A700A5ABC3 /* BusinessFest-Info.plist */ = {isa = PBXFileReference; path = "BusinessFest-Info.plist"; sourceTree = "<group>"; };
+		63B666C7152A10A700A5ABC3 /* BusinessFest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BusinessFest-Info.plist"; sourceTree = "<group>"; };
 		63B666C9152A10A700A5ABC3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		63B666CB152A10A700A5ABC3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		63B666CD152A10A700A5ABC3 /* BusinessFest-Prefix.pch */ = {isa = PBXFileReference; path = "BusinessFest-Prefix.pch"; sourceTree = "<group>"; };
-		63B666CE152A10A700A5ABC3 /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		63B666CD152A10A700A5ABC3 /* BusinessFest-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BusinessFest-Prefix.pch"; sourceTree = "<group>"; };
+		63B666CE152A10A700A5ABC3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		63B666CF152A10A700A5ABC3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		63B666D1152A10A700A5ABC3 /* FirstViewController.h */ = {isa = PBXFileReference; path = FirstViewController.h; sourceTree = "<group>"; };
+		63B666D1152A10A700A5ABC3 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
 		63B666D2152A10A700A5ABC3 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
 		63B666D4152A10A700A5ABC3 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
 		63B666D6152A10A700A5ABC3 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
-		63B666D8152A10A700A5ABC3 /* SecondViewController.h */ = {isa = PBXFileReference; path = SecondViewController.h; sourceTree = "<group>"; };
+		63B666D8152A10A700A5ABC3 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		63B666D9152A10A700A5ABC3 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		63B666DB152A10A700A5ABC3 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
 		63B666DD152A10A700A5ABC3 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
 		63B666E0152A10A700A5ABC3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FirstViewController.xib; sourceTree = "<group>"; };
 		63B666E3152A10A700A5ABC3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SecondViewController.xib; sourceTree = "<group>"; };
+		63B666EA152A121A00A5ABC3 /* ThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdViewController.h; sourceTree = "<group>"; };
+		63B666EB152A121A00A5ABC3 /* ThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
+		63B666EC152A121A00A5ABC3 /* ThirdViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ThirdViewController.xib; sourceTree = "<group>"; };
+		63B666F8152A1ACF00A5ABC3 /* MyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTableViewController.h; sourceTree = "<group>"; };
+		63B666F9152A1ACF00A5ABC3 /* MyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTableViewController.m; sourceTree = "<group>"; };
+		63B666FA152A1AD000A5ABC3 /* MyTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyTableViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,14 +104,16 @@
 				63B666CF152A10A700A5ABC3 /* AppDelegate.m */,
 				63B666D1152A10A700A5ABC3 /* FirstViewController.h */,
 				63B666D2152A10A700A5ABC3 /* FirstViewController.m */,
-				63B666D4152A10A700A5ABC3 /* first.png */,
-				63B666D6152A10A700A5ABC3 /* first@2x.png */,
 				63B666D8152A10A700A5ABC3 /* SecondViewController.h */,
 				63B666D9152A10A700A5ABC3 /* SecondViewController.m */,
-				63B666DB152A10A700A5ABC3 /* second.png */,
-				63B666DD152A10A700A5ABC3 /* second@2x.png */,
+				63B666EA152A121A00A5ABC3 /* ThirdViewController.h */,
+				63B666EB152A121A00A5ABC3 /* ThirdViewController.m */,
 				63B666DF152A10A700A5ABC3 /* FirstViewController.xib */,
 				63B666E2152A10A700A5ABC3 /* SecondViewController.xib */,
+				63B666EC152A121A00A5ABC3 /* ThirdViewController.xib */,
+				63B666F8152A1ACF00A5ABC3 /* MyTableViewController.h */,
+				63B666F9152A1ACF00A5ABC3 /* MyTableViewController.m */,
+				63B666FA152A1AD000A5ABC3 /* MyTableViewController.xib */,
 				63B666C6152A10A700A5ABC3 /* Supporting Files */,
 			);
 			path = BusinessFest;
@@ -110,12 +122,24 @@
 		63B666C6152A10A700A5ABC3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				63B666EF152A123C00A5ABC3 /* Resources */,
 				63B666C7152A10A700A5ABC3 /* BusinessFest-Info.plist */,
 				63B666C8152A10A700A5ABC3 /* InfoPlist.strings */,
 				63B666CB152A10A700A5ABC3 /* main.m */,
 				63B666CD152A10A700A5ABC3 /* BusinessFest-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		63B666EF152A123C00A5ABC3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				63B666D4152A10A700A5ABC3 /* first.png */,
+				63B666D6152A10A700A5ABC3 /* first@2x.png */,
+				63B666DB152A10A700A5ABC3 /* second.png */,
+				63B666DD152A10A700A5ABC3 /* second@2x.png */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,6 +200,8 @@
 				63B666DE152A10A700A5ABC3 /* second@2x.png in Resources */,
 				63B666E1152A10A700A5ABC3 /* FirstViewController.xib in Resources */,
 				63B666E4152A10A700A5ABC3 /* SecondViewController.xib in Resources */,
+				63B666EE152A121B00A5ABC3 /* ThirdViewController.xib in Resources */,
+				63B666FC152A1AD000A5ABC3 /* MyTableViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -190,6 +216,8 @@
 				63B666D0152A10A700A5ABC3 /* AppDelegate.m in Sources */,
 				63B666D3152A10A700A5ABC3 /* FirstViewController.m in Sources */,
 				63B666DA152A10A700A5ABC3 /* SecondViewController.m in Sources */,
+				63B666ED152A121B00A5ABC3 /* ThirdViewController.m in Sources */,
+				63B666FB152A1AD000A5ABC3 /* MyTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
