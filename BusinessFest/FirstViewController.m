@@ -7,10 +7,12 @@
 //
 
 #import "FirstViewController.h"
+#import "EventoViewController.h"
+#import "LocalizacaoViewController.h"
 
 @implementation FirstViewController
 
-@synthesize options;
+@synthesize options, navController;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -34,6 +36,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+//    UINavigationController *navigationController;
+//    navigationController = [[UINavigationController alloc] init];
+//    [self.view addSubview:navigationController.view];   
     self.options = [[NSArray alloc] 
                     initWithObjects:@"O Evento", @"Programação",
                     @"Casting", @"Cotas/Reservas", @"Localização",@"Novidades",@"Entidades/Patrocinadores",@"Contato", nil];
@@ -99,9 +104,6 @@
     cell.textLabel.text = [self.options objectAtIndex: [indexPath row]];
     
     
-
-    //cell.textLabel.text = [NSString stringWithFormat:@"Linha %i da seção %i", indexPath.row, indexPath.section];
-    
     return cell;
 }
 
@@ -109,5 +111,15 @@
 {
     return UITableViewCellAccessoryDisclosureIndicator;
 }
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    // Navigation logic may go here. Create and push another view controller.
+    LocalizacaoViewController *localizacaoViewController = [[LocalizacaoViewController alloc] initWithNibName:@"localizacaoView" bundle:nil];
+    [self.navigationController pushViewController:localizacaoViewController];
+    [localizacaoViewController release];
+}
+
+
+
 
 @end
