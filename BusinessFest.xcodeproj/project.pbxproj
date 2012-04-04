@@ -7,10 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6318FF05152B8A0600A5A672 /* EventoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6318FF03152B8A0600A5A672 /* EventoViewController.m */; };
-		6318FF06152B8A0600A5A672 /* EventoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6318FF04152B8A0600A5A672 /* EventoViewController.xib */; };
-		6318FF0A152B8A1A00A5A672 /* LocalizacaoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6318FF08152B8A1A00A5A672 /* LocalizacaoViewController.m */; };
-		6318FF0B152B8A1A00A5A672 /* LocalizacaoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6318FF09152B8A1A00A5A672 /* LocalizacaoViewController.xib */; };
 		6318FF1E152BAC7400A5A672 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6318FF1D152BAC7400A5A672 /* MapKit.framework */; };
 		6318FF20152BAC7C00A5A672 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6318FF1F152BAC7C00A5A672 /* CoreLocation.framework */; };
 		6318FF23152BAFD900A5A672 /* DisplayMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 6318FF22152BAFD900A5A672 /* DisplayMap.m */; };
@@ -30,15 +26,13 @@
 		63B666E4152A10A700A5ABC3 /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63B666E2152A10A700A5ABC3 /* SecondViewController.xib */; };
 		63B666ED152A121B00A5ABC3 /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B666EB152A121A00A5ABC3 /* ThirdViewController.m */; };
 		63B666EE152A121B00A5ABC3 /* ThirdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63B666EC152A121A00A5ABC3 /* ThirdViewController.xib */; };
+		E1B41A8E152CB9B8005EFB36 /* EventoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1B41A89152CB9B8005EFB36 /* EventoViewController.m */; };
+		E1B41A8F152CB9B8005EFB36 /* EventoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1B41A8A152CB9B8005EFB36 /* EventoViewController.xib */; };
+		E1B41A90152CB9B8005EFB36 /* LocalizacaoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1B41A8C152CB9B8005EFB36 /* LocalizacaoViewController.m */; };
+		E1B41A91152CB9B8005EFB36 /* LocalizacaoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1B41A8D152CB9B8005EFB36 /* LocalizacaoViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		6318FF02152B8A0600A5A672 /* EventoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EventoViewController.h; path = ../../../../../Users/fabiomendonca/Xcode/Vogall/BusinessFest/EventoViewController.h; sourceTree = "<group>"; };
-		6318FF03152B8A0600A5A672 /* EventoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EventoViewController.m; path = ../../../../../Users/fabiomendonca/Xcode/Vogall/BusinessFest/EventoViewController.m; sourceTree = "<group>"; };
-		6318FF04152B8A0600A5A672 /* EventoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EventoViewController.xib; path = ../../../../../Users/fabiomendonca/Xcode/Vogall/BusinessFest/EventoViewController.xib; sourceTree = "<group>"; };
-		6318FF07152B8A1A00A5A672 /* LocalizacaoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocalizacaoViewController.h; path = ../../../../../Users/fabiomendonca/Xcode/Vogall/BusinessFest/LocalizacaoViewController.h; sourceTree = "<group>"; };
-		6318FF08152B8A1A00A5A672 /* LocalizacaoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LocalizacaoViewController.m; path = ../../../../../Users/fabiomendonca/Xcode/Vogall/BusinessFest/LocalizacaoViewController.m; sourceTree = "<group>"; };
-		6318FF09152B8A1A00A5A672 /* LocalizacaoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LocalizacaoViewController.xib; path = ../../../../../Users/fabiomendonca/Xcode/Vogall/BusinessFest/LocalizacaoViewController.xib; sourceTree = "<group>"; };
 		6318FF1D152BAC7400A5A672 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		6318FF1F152BAC7C00A5A672 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		6318FF21152BAFD900A5A672 /* DisplayMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DisplayMap.h; sourceTree = "<group>"; };
@@ -66,6 +60,12 @@
 		63B666EA152A121A00A5ABC3 /* ThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdViewController.h; sourceTree = "<group>"; };
 		63B666EB152A121A00A5ABC3 /* ThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
 		63B666EC152A121A00A5ABC3 /* ThirdViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ThirdViewController.xib; sourceTree = "<group>"; };
+		E1B41A88152CB9B8005EFB36 /* EventoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventoViewController.h; sourceTree = "<group>"; };
+		E1B41A89152CB9B8005EFB36 /* EventoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventoViewController.m; sourceTree = "<group>"; };
+		E1B41A8A152CB9B8005EFB36 /* EventoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventoViewController.xib; sourceTree = "<group>"; };
+		E1B41A8B152CB9B8005EFB36 /* LocalizacaoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalizacaoViewController.h; sourceTree = "<group>"; };
+		E1B41A8C152CB9B8005EFB36 /* LocalizacaoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalizacaoViewController.m; sourceTree = "<group>"; };
+		E1B41A8D152CB9B8005EFB36 /* LocalizacaoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LocalizacaoViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,13 +89,13 @@
 			children = (
 				6318FF1F152BAC7C00A5A672 /* CoreLocation.framework */,
 				6318FF1D152BAC7400A5A672 /* MapKit.framework */,
-				6318FF02152B8A0600A5A672 /* EventoViewController.h */,
-				6318FF03152B8A0600A5A672 /* EventoViewController.m */,
-				6318FF04152B8A0600A5A672 /* EventoViewController.xib */,
-				6318FF07152B8A1A00A5A672 /* LocalizacaoViewController.h */,
-				6318FF08152B8A1A00A5A672 /* LocalizacaoViewController.m */,
-				6318FF09152B8A1A00A5A672 /* LocalizacaoViewController.xib */,
 				6318FF21152BAFD900A5A672 /* DisplayMap.h */,
+				E1B41A88152CB9B8005EFB36 /* EventoViewController.h */,
+				E1B41A89152CB9B8005EFB36 /* EventoViewController.m */,
+				E1B41A8A152CB9B8005EFB36 /* EventoViewController.xib */,
+				E1B41A8B152CB9B8005EFB36 /* LocalizacaoViewController.h */,
+				E1B41A8C152CB9B8005EFB36 /* LocalizacaoViewController.m */,
+				E1B41A8D152CB9B8005EFB36 /* LocalizacaoViewController.xib */,
 				6318FF22152BAFD900A5A672 /* DisplayMap.m */,
 				63B666C5152A10A700A5ABC3 /* BusinessFest */,
 				63B666BE152A10A700A5ABC3 /* Frameworks */,
@@ -222,8 +222,8 @@
 				63B666E1152A10A700A5ABC3 /* FirstViewController.xib in Resources */,
 				63B666E4152A10A700A5ABC3 /* SecondViewController.xib in Resources */,
 				63B666EE152A121B00A5ABC3 /* ThirdViewController.xib in Resources */,
-				6318FF06152B8A0600A5A672 /* EventoViewController.xib in Resources */,
-				6318FF0B152B8A1A00A5A672 /* LocalizacaoViewController.xib in Resources */,
+				E1B41A8F152CB9B8005EFB36 /* EventoViewController.xib in Resources */,
+				E1B41A91152CB9B8005EFB36 /* LocalizacaoViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,9 +239,9 @@
 				63B666D3152A10A700A5ABC3 /* FirstViewController.m in Sources */,
 				63B666DA152A10A700A5ABC3 /* SecondViewController.m in Sources */,
 				63B666ED152A121B00A5ABC3 /* ThirdViewController.m in Sources */,
-				6318FF05152B8A0600A5A672 /* EventoViewController.m in Sources */,
-				6318FF0A152B8A1A00A5A672 /* LocalizacaoViewController.m in Sources */,
 				6318FF23152BAFD900A5A672 /* DisplayMap.m in Sources */,
+				E1B41A8E152CB9B8005EFB36 /* EventoViewController.m in Sources */,
+				E1B41A90152CB9B8005EFB36 /* LocalizacaoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
