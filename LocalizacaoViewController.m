@@ -17,6 +17,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
+        self.hidesBottomBarWhenPushed = YES;
         // Custom initialization
     }
     return self;

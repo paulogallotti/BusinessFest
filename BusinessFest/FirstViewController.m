@@ -38,7 +38,7 @@
     [super viewDidLoad];
     
     [self.view addSubview:self.navController.view];
-    
+    self.title = @"Business Fest";
 //    UINavigationController *navigationController;
 //    navigationController = [[UINavigationController alloc] init];
 //    [self.view addSubview:navigationController.view];   
@@ -61,6 +61,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    [self.tabBarController.tabBar setHidden:NO];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -82,6 +83,7 @@
 {
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
+
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
@@ -111,9 +113,27 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    LocalizacaoViewController *localizacaoViewController = [[LocalizacaoViewController alloc] init];
-    [self.navController pushViewController:localizacaoViewController animated:YES];
-    [localizacaoViewController release];
+    
+    if ([indexPath row]==0) 
+    {
+        EventoViewController *eventoViewController =[[EventoViewController alloc] init];
+        eventoViewController.title = @"O Evento";
+        [self.navController pushViewController:eventoViewController animated:YES];
+        [eventoViewController release];
+    }
+    
+    
+    
+    if ([indexPath row]==4) 
+    {
+        LocalizacaoViewController *localizacaoViewController = [[LocalizacaoViewController alloc] init];
+        localizacaoViewController.title = @"Localização";
+        
+        [self.navController pushViewController:localizacaoViewController animated:YES];
+        [localizacaoViewController release];
+    }
+    
+    
 }
 
 @end
