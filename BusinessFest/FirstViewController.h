@@ -10,7 +10,6 @@
 
 @interface FirstViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
-
 @property (nonatomic, retain) NSArray *options;
 @property (nonatomic, retain) IBOutlet UINavigationController *navController;
 

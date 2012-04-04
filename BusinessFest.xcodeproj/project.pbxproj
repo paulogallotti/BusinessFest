@@ -87,16 +87,14 @@
 		63B666B0152A10A600A5ABC3 = {
 			isa = PBXGroup;
 			children = (
-				6318FF1F152BAC7C00A5A672 /* CoreLocation.framework */,
-				6318FF1D152BAC7400A5A672 /* MapKit.framework */,
 				6318FF21152BAFD900A5A672 /* DisplayMap.h */,
+				6318FF22152BAFD900A5A672 /* DisplayMap.m */,
 				E1B41A88152CB9B8005EFB36 /* EventoViewController.h */,
 				E1B41A89152CB9B8005EFB36 /* EventoViewController.m */,
 				E1B41A8A152CB9B8005EFB36 /* EventoViewController.xib */,
 				E1B41A8B152CB9B8005EFB36 /* LocalizacaoViewController.h */,
 				E1B41A8C152CB9B8005EFB36 /* LocalizacaoViewController.m */,
 				E1B41A8D152CB9B8005EFB36 /* LocalizacaoViewController.xib */,
-				6318FF22152BAFD900A5A672 /* DisplayMap.m */,
 				63B666C5152A10A700A5ABC3 /* BusinessFest */,
 				63B666BE152A10A700A5ABC3 /* Frameworks */,
 				63B666BC152A10A700A5ABC3 /* Products */,
@@ -114,6 +112,8 @@
 		63B666BE152A10A700A5ABC3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6318FF1F152BAC7C00A5A672 /* CoreLocation.framework */,
+				6318FF1D152BAC7400A5A672 /* MapKit.framework */,
 				63B666BF152A10A700A5ABC3 /* UIKit.framework */,
 				63B666C1152A10A700A5ABC3 /* Foundation.framework */,
 				63B666C3152A10A700A5ABC3 /* CoreGraphics.framework */,

@@ -36,6 +36,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    [self.view addSubview:self.navController.view];
+    
 //    UINavigationController *navigationController;
 //    navigationController = [[UINavigationController alloc] init];
 //    [self.view addSubview:navigationController.view];   
@@ -77,10 +80,8 @@
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    // Return YES for supported orientations
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
-
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
@@ -97,29 +98,22 @@
     static NSString *cellIdentifier = @"Cell";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-    if (cell == nil) {
+    if (cell == nil)
+    {
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier] autorelease];
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
     
     cell.textLabel.text = [self.options objectAtIndex: [indexPath row]];
     
-    
     return cell;
 }
 
-- (UITableViewCellAccessoryType)tableView:(UITableView *)tv accessoryTypeForRowWithIndexPath:(NSIndexPath *)indexPath
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return UITableViewCellAccessoryDisclosureIndicator;
-}
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Navigation logic may go here. Create and push another view controller.
-    LocalizacaoViewController *localizacaoViewController = [[LocalizacaoViewController alloc] initWithNibName:@"localizacaoView" bundle:nil];
-    [self.navigationController pushViewController:localizacaoViewController];
+    LocalizacaoViewController *localizacaoViewController = [[LocalizacaoViewController alloc] init];
+    [self.navController pushViewController:localizacaoViewController animated:YES];
     [localizacaoViewController release];
 }
-
-
-
 
 @end
