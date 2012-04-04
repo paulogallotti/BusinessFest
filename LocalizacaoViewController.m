@@ -53,8 +53,8 @@
     [mapview setDelegate:self];
     
     DisplayMap *ann = [[DisplayMap alloc] init]; 
-    ann.title = @"Citibank Hall . Barra da Tijuca";
-    ann.subtitle = @"Av. Ayrton Senna, 3.000,Shopping Via Parque - Barra da Tijuca, RJ"; 
+    ann.title = @"Citibank Hall - Barra da Tijuca";
+    ann.subtitle = @"Av. Ayrton Senna - 3.000 , RJ"; 
     ann.coordinate = region.center; 
     [mapview addAnnotation:ann];
     
