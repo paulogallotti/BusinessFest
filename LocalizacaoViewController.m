@@ -77,7 +77,8 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
--(IBAction)setMap:(id)sender{
+-(IBAction)setMap:(id)sender
+{
     switch (((UISegmentedControl *)sender).selectedSegmentIndex) {
         case 0:
             mapview.mapType = MKMapTypeStandard;
@@ -94,7 +95,38 @@
     }
 }
 
--(void) locationManager:(CLLocationManager *)manager didUpdateToLocation: (CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation {
+-(IBAction)getlocation
+{
+    //SE O CÓDIGO ABAIXO NÃO FUNCIONA NO IPHONE DEVICE, USAR SHOWUSERLOCATION
+    mapview.showsUserLocation = YES;
+    
+    if ([CLLocationManager locationServicesEnabled]) 
+    {
+        CLLocationManager* manager = [[CLLocationManager alloc] init];
+        [manager startUpdatingLocation]; 
+        [manager release];
+    }
+    else
+    {
+        UIAlertView* alerta = [[UIAlertView alloc] initWithTitle:@"Ooops" message:@"Serviços de localização não habilitados. Vá para as configurações do iPhone para habilitá-las." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alerta show];
+        [alerta release];
+    }
+}
+
+-(IBAction)mostraCoordenadas
+{
+	CLLocationCoordinate2D coordenada = CLLocationCoordinate2DMake(-22.982851, -43.365446);
+	MKCoordinateSpan span = MKCoordinateSpanMake(0.04f,0.04f);
+	MKCoordinateRegion region = MKCoordinateRegionMake(coordenada, span);
+	[mapview setRegion:region];
+}
+
+
+
+
+-(void) locationManager:(CLLocationManager *)manager didUpdateToLocation: (CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation 
+{
     MKCoordinateSpan span = MKCoordinateSpanMake(0.01, 0.01);
     MKCoordinateRegion region = MKCoordinateRegionMake (newLocation.coordinate, span);
     [mapview setRegion:region animated:YES];
@@ -102,7 +134,8 @@
 }
 
 -(void) locationManager:(CLLocationManager *)manager didFailWithError:
-(NSError *)error {
+(NSError *)error 
+{
     if ([error code] == kCLErrorDenied){ UIAlertView* alerta = [[UIAlertView alloc] initWithTitle:@"Ooops"                                                                                          message:@"Você recusou este aplicativo de acessar a sua localização" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [alerta show];
         [alerta release];

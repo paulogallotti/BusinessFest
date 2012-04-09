@@ -20,5 +20,7 @@
 @property (nonatomic,retain) IBOutlet MKMapView *mapview;
 
 -(IBAction)setMap:(id)sender;
+-(IBAction)getlocation;
+-(IBAction)mostraCoordenadas;
 
 @end
