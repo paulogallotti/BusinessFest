@@ -3,11 +3,11 @@
 //  Pacha
 //
 //  Created by Fabio Mendonça on 13/07/11.
-//  Copyright 2011 PUC Rio. All rights reserved.
+//  Copyright 2011 Vogall. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
-#import "FirstViewController.h"
+#import "MainViewController.h"
 #import "LocalizacaoViewController.h"
 #import <MapKit/MapKit.h>
 

@@ -3,27 +3,21 @@
 //  BusinessFest
 //
 //  Created by Fabio Mendonça on 02/04/12.
-//  Copyright (c) 2012 PUC. All rights reserved.
+//  Copyright (c) 2012 Vogall. All rights reserved.
 //
 
 #import "AppDelegate.h"
-
-#import "FirstViewController.h"
-
-#import "SecondViewController.h"
-
-#import "ThirdViewController.h"
-
+#import "MainViewController.h"
 
 @implementation AppDelegate
 
 @synthesize window = _window;
-@synthesize tabBarController = _tabBarController;
+@synthesize navigationController = _navigationController;
 
 - (void)dealloc
 {
     [_window release];
-    [_tabBarController release];
+    [_navigationController release];
     [super dealloc];
 }
 
@@ -31,14 +25,10 @@
 {
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     
-    // Override point for customization after application launch.
-    UIViewController *viewController1 = [[[FirstViewController alloc] initWithNibName:@"FirstViewController" bundle:nil] autorelease];
-    UIViewController *viewController2 = [[[SecondViewController alloc] initWithNibName:@"SecondViewController" bundle:nil] autorelease];
-    UIViewController *viewController3 = [[[ThirdViewController alloc] initWithNibName:@"ThirdViewController" bundle:nil] autorelease];
+    FirstViewController *viewController = [[[FirstViewController alloc] initWithNibName:@"FirstViewController" bundle:nil] autorelease];
     
-    self.tabBarController = [[[UITabBarController alloc] init] autorelease];
-    self.tabBarController.viewControllers = [NSArray arrayWithObjects:viewController1, viewController2,viewController3, nil];
-    self.window.rootViewController = self.tabBarController;
+    self.navigationController = [[[UINavigationController alloc] initWithRootViewController:viewController] autorelease];
+    self.window.rootViewController = self.navigationController;
     [self.window makeKeyAndVisible];
     return YES;
 }
