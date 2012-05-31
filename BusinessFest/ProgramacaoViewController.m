@@ -1,34 +1,27 @@
 //
-//  ThirdViewController.m
+//  ProgramacaoViewController.m
 //  BusinessFest
 //
-//  Created by Fabio Mendonça on 02/04/12.
+//  Created by Paulo Gallotti Rodrigues on 5/31/12.
 //  Copyright (c) 2012 PUC. All rights reserved.
 //
 
-#import "ThirdViewController.h"
+#import "ProgramacaoViewController.h"
 
-@implementation ThirdViewController
+@interface ProgramacaoViewController ()
+
+@end
+
+@implementation ProgramacaoViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.title = NSLocalizedString(@"Depois", @"Depois");
-        self.tabBarItem.image = [UIImage imageNamed:@"first"];
+        // Custom initialization
     }
     return self;
 }
-
-- (void)didReceiveMemoryWarning
-{
-    // Releases the view if it doesn't have a superview.
-    [super didReceiveMemoryWarning];
-    
-    // Release any cached data, images, etc that aren't in use.
-}
-
-#pragma mark - View lifecycle
 
 - (void)viewDidLoad
 {
@@ -45,7 +38,6 @@
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
