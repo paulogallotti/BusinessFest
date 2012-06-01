@@ -8,12 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FirstViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+@interface MainViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, retain) NSArray *options;
 
 @property (nonatomic, retain) UILabel *countdownLabel;
 
-@property (nonatomic, retain) IBOutlet UITableView *tableView;
+- (IBAction)infoAction:(id)sender;
 
 @end

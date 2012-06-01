@@ -3,16 +3,19 @@
 //  BusinessFest
 //
 //  Created by Paulo Gallotti Rodrigues on 5/31/12.
-//  Copyright (c) 2012 PUC. All rights reserved.
+//  Copyright (c) 2012 Vogall. All rights reserved.
 //
 
 #import "CerimonialViewController.h"
+#import "CerimonialViewCell.h"
 
 @interface CerimonialViewController ()
 
 @end
 
 @implementation CerimonialViewController
+
+@synthesize scrollView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -23,10 +26,19 @@
     return self;
 }
 
+- (void)dealloc
+{
+    [scrollView release];
+    [super dealloc];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
+    self.scrollView.contentSize = CGSizeMake(self.view.frame.size.width, 700.0);
+    UIView *view = [[[NSBundle mainBundle] loadNibNamed:@"Cerimonial" owner:self options:nil] objectAtIndex:0];
+    [self.scrollView addSubview:view];
 }
 
 - (void)viewDidUnload

@@ -11,13 +11,14 @@
 
 @implementation AppDelegate
 
-@synthesize window = _window;
+@synthesize window = _window, mMoviePlayer;
 @synthesize navigationController = _navigationController;
 
 - (void)dealloc
 {
     [_window release];
     [_navigationController release];
+    [mMoviePlayer release];
     [super dealloc];
 }
 
@@ -25,12 +26,49 @@
 {
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     
-    FirstViewController *viewController = [[[FirstViewController alloc] initWithNibName:@"FirstViewController" bundle:nil] autorelease];
-    
+    MainViewController *viewController = [[[MainViewController alloc] initWithNibName:@"MainViewController" bundle:nil] autorelease];
     self.navigationController = [[[UINavigationController alloc] initWithRootViewController:viewController] autorelease];
     self.window.rootViewController = self.navigationController;
+    
+    NSURL* mMovieURL;
+    NSBundle *bundle = [NSBundle mainBundle];
+    if(bundle != nil)
+    {
+        NSString *moviePath = [bundle pathForResource:@"businessfest_iphone_intro" ofType:@"m4v"];
+        if (moviePath)
+        {
+            mMovieURL = [NSURL fileURLWithPath:moviePath];
+            [mMovieURL retain];
+        }
+    }
+    mMoviePlayer = [[MPMoviePlayerController alloc] initWithContentURL:mMovieURL];
+    [mMovieURL release];
+    [[NSNotificationCenter defaultCenter] addObserver:self 
+                                             selector:@selector(moviePlayBackDidFinish:) 
+                                                 name:MPMoviePlayerPlaybackDidFinishNotification 
+                                               object:mMoviePlayer];
+    
+    mMoviePlayer.controlStyle = MPMovieControlStyleNone;
+    //mMoviePlayer.scalingMode = MPMovieScalingModeFill;
+    //[self.window addSubview:mMoviePlayer.view];
+    //[self.navigationController.view addSubview:mMoviePlayer.view];
+    //[self.navigationController.view bringSubviewToFront:mMoviePlayer.view];
+    //[mMoviePlayer setFullscreen:YES animated:NO];
+    
+    [mMoviePlayer.view setFrame:CGRectMake(0, 0, 320, 480)];
+    [self.window.rootViewController.view addSubview:mMoviePlayer.view];
+    
+    [mMoviePlayer play];
+    
     [self.window makeKeyAndVisible];
     return YES;
+}
+
+-(void) moviePlayBackDidFinish:(NSNotification*)notification
+{
+    NSLog(@"Intro video stopped");
+    [mMoviePlayer release];
+    [self.mMoviePlayer.view removeFromSuperview];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

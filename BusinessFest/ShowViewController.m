@@ -41,4 +41,19 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
+- (IBAction)openViewAction:(id)sender
+{
+    //http://www.youtube.com/watch?feature=player_embedded&v=bnb4yvxH-qc
+    //http://www.youtube.com/watch?feature=player_embedded&v=iqZbddKtEgc
+    
+    switch ([sender tag])
+    {
+        case 0:
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.youtube.com/watch?feature=player_embedded&v=bnb4yvxH-qc"]];
+            break;
+        case 1:
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.youtube.com/watch?feature=player_embedded&v=iqZbddKtEgc"]];
+    }
+}
+
 @end

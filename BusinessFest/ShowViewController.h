@@ -10,4 +10,6 @@
 
 @interface ShowViewController : UIViewController
 
+- (IBAction)openViewAction:(id)sender;
+
 @end

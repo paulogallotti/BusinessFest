@@ -12,10 +12,11 @@
 #import "LocalizacaoViewController.h"
 #import "EntidadesEmpresasViewController.h"
 #import "ContatoViewController.h"
+#import "InfoViewController.h"
 
-@implementation FirstViewController
+@implementation MainViewController
 
-@synthesize options, tableView, countdownLabel;
+@synthesize options, countdownLabel;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -39,11 +40,6 @@
 {
     [super viewDidLoad];
     
-    UIImageView *banner = [[UIImageView alloc] initWithFrame:CGRectMake(0.0, 0.0, 286.0, 70.0)];
-    banner.backgroundColor = [UIColor orangeColor];
-    //banner.image = [UIImage imageNamed:@"business_fest_banner"];
-    self.navigationItem.titleView = banner;
-    
     self.options = [[NSArray alloc] 
                     initWithObjects:@"O Evento", @"Programação", @"Localização", @"Entidades e Empresas", @"Contato", nil];
     
@@ -52,19 +48,22 @@
     self.navigationController.toolbar.barStyle = UIBarStyleBlack;
     
     countdownLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.0, 10.0, 320.0, 20.0)];
-    self.countdownLabel.font = [UIFont fontWithName:@"Helvetica Neue BoldMT" size:16.0];
+    self.countdownLabel.font = [UIFont fontWithName:@"Helvetica Neue" size:14.0];
     self.countdownLabel.textColor = [UIColor whiteColor];
     self.countdownLabel.textAlignment = UITextAlignmentCenter;
     self.countdownLabel.backgroundColor = [UIColor clearColor];
     self.countdownLabel.numberOfLines = 2;
     [self.navigationController.toolbar addSubview:self.countdownLabel];
     [self.countdownLabel release];
+    
+    //businessfest_iphone_intro
+    
+    
 }
 
 -(void)dealloc
 {
     [options release];
-    [tableView release];
     [countdownLabel release];
     [super dealloc];
 }
@@ -121,7 +120,6 @@
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
 
-
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     return 1;
@@ -130,6 +128,11 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return [self.options count];
+}
+
+- (float)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 61.0;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)_tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -141,7 +144,6 @@
     {
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier] autorelease];
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-        cell.selectionStyle = UITableViewCellSelectionStyleGray;
     }
     
     cell.textLabel.text = [self.options objectAtIndex: [indexPath row]];
@@ -195,6 +197,14 @@
             break;
         }
     }
+}
+
+- (IBAction)infoAction:(id)sender
+{
+    InfoViewController *infoView = [[InfoViewController alloc] init];
+    infoView.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+    [self presentModalViewController:infoView animated:YES];
+    [infoView release];
 }
 
 @end

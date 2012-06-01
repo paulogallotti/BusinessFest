@@ -3,12 +3,14 @@
 //  BusinessFest
 //
 //  Created by Paulo Gallotti Rodrigues on 5/31/12.
-//  Copyright (c) 2012 PUC. All rights reserved.
+//  Copyright (c) 2012 Vogall. All rights reserved.
 //
 
 #import "CerimonialViewCell.h"
 
 @implementation CerimonialViewCell
+
+@synthesize titleLabel, infoLabel;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
@@ -17,6 +19,13 @@
         // Initialization code
     }
     return self;
+}
+
+- (void)dealloc
+{
+    [titleLabel release];
+    [infoLabel release];
+    [super dealloc];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated

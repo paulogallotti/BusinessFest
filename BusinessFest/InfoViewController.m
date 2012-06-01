@@ -3,7 +3,7 @@
 //  BusinessFest
 //
 //  Created by Paulo Gallotti Rodrigues on 6/1/12.
-//  Copyright (c) 2012 PUC. All rights reserved.
+//  Copyright (c) 2012 Vogall. All rights reserved.
 //
 
 #import "InfoViewController.h"
@@ -39,6 +39,16 @@
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+- (IBAction)backAction:(id)sender
+{
+    [self dismissModalViewControllerAnimated:YES];
+}
+
+- (IBAction)vogallAction:(id)sender
+{
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.vogall.com.br"]];
 }
 
 @end
